@@ -20,7 +20,8 @@ ENV PATH="/root/.deno/bin:$PATH"
 WORKDIR /app
 
 # Install all the required Python libraries
-RUN pip install --no-cache-dir pyrofork tgcrypto yt-dlp requests aiohttp
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy all your files into the container
 COPY . .
