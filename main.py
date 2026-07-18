@@ -205,7 +205,7 @@ def _base_opts():
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124.0.0.0 Safari/537.36",
             "Accept-Language": "en-US,en;q=0.9",
         },
-        "extractor_args": {"youtube": {"player_client": ["web","tv"], "skip": ["dash"]}},
+        "extractor_args": {"youtube": {"player_client": ["android","web"], "skip": ["dash"]}},
         "remote_components": ["ejs:github"], # Deno magic
     }
     if COOKIES_FILE: o["cookiefile"] = COOKIES_FILE
