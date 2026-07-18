@@ -1,6 +1,6 @@
 pyrotgfork
 tgcrypto-pyrofork
-yt-dlp
+yt-dlp[default]>=2026.7.4
 requests
 aiohttp
 motor
