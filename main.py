@@ -604,6 +604,8 @@ async def help_cmd(client, message):
 # ═══════════════════════════════════════════
 @app.on_message(filters.text & ~filters.command(["start","ping","help"]))
 async def handle_url(client, message):
+    if not message.from_user:
+        return
     uid  = message.from_user.id
     text = (message.text or "").strip()
     if not is_auth(uid): await message.reply_text("⛔ Not authorized."); return
